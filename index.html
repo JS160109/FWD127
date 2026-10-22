@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SysGrid - Lab Workstation Allocation</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <input type="radio" name="page" id="t-home" class="tab" checked>
+  <input type="radio" name="page" id="t-seats" class="tab">
+  <input type="radio" name="page" id="t-register" class="tab">
+  <input type="radio" name="page" id="t-about" class="tab">
+
+  <nav>
+    <span class="logo">SysGrid</span>
+    <label for="t-home">Home</label>
+    <label for="t-seats">Seating</label>
+    <label for="t-register">Register</label>
+    <label for="t-about">About</label>
+  </nav>
+
+  <section class="page" id="home">
+    <div class="hero">
+      <h1>SysGrid</h1>
+      <p>Computer lab workstation allocation and session log system</p>
+      <label for="t-seats">Find a PC</label>
+    </div>
+
+    <h2>What do you want to do?</h2>
+    <div class="cards">
+      <label class="card" for="t-seats">
+        <h3>Seating</h3>
+        <p>Check which PCs are working and report faulty ones.</p>
+      </label>
+      <label class="card" for="t-register">
+        <h3>Register</h3>
+        <p>Write your name and PC number. Print it as a PDF.</p>
+      </label>
+      <label class="card" for="t-about">
+        <h3>About</h3>
+        <p>Read about the project and the team.</p>
+      </label>
+    </div>
+  </section>
+
+  <section class="page" id="seats">
+    <h2>Seating Grid</h2>
+    <p>Green means working. Click "Report faulty" to turn a PC red. Click again to undo.</p>
+
+    <div class="pc-grid">
+      <div class="pc"><strong>PC-01</strong><input type="checkbox" id="pc1"><label for="pc1">Report faulty</label></div>
+      <div class="pc"><strong>PC-02</strong><input type="checkbox" id="pc2"><label for="pc2">Report faulty</label></div>
+      <div class="pc"><strong>PC-03</strong><input type="checkbox" id="pc3" checked><label for="pc3">Report faulty</label></div>
+      <div class="pc"><strong>PC-04</strong><input type="checkbox" id="pc4"><label for="pc4">Report faulty</label></div>
+      <div class="pc"><strong>PC-05</strong><input type="checkbox" id="pc5"><label for="pc5">Report faulty</label></div>
+      <div class="pc"><strong>PC-06</strong><input type="checkbox" id="pc6"><label for="pc6">Report faulty</label></div>
+      <div class="pc"><strong>PC-07</strong><input type="checkbox" id="pc7"><label for="pc7">Report faulty</label></div>
+      <div class="pc"><strong>PC-08</strong><input type="checkbox" id="pc8"><label for="pc8">Report faulty</label></div>
+      <div class="pc"><strong>PC-09</strong><input type="checkbox" id="pc9"><label for="pc9">Report faulty</label></div>
+      <div class="pc"><strong>PC-10</strong><input type="checkbox" id="pc10"><label for="pc10">Report faulty</label></div>
+      <div class="pc"><strong>PC-11</strong><input type="checkbox" id="pc11"><label for="pc11">Report faulty</label></div>
+      <div class="pc"><strong>PC-12</strong><input type="checkbox" id="pc12"><label for="pc12">Report faulty</label></div>
+    </div>
+  </section>
+
+  <section class="page" id="register">
+    <h2>Session Register</h2>
+    <p>Click a cell and type. Press Ctrl + P to save it as a PDF.</p>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Roll No.</th>
+        <th>PC No.</th>
+        <th>Subject</th>
+        <th>Time</th>
+      </tr>
+      <tr>
+        <td contenteditable="true">Jeetmanyu Sharma</td>
+        <td contenteditable="true">127</td>
+        <td contenteditable="true">PC-05</td>
+        <td contenteditable="true">Web Design</td>
+        <td contenteditable="true">10:05</td>
+      </tr>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="page" id="about">
+    <h2>About the Project</h2>
+
+    <details open>
+      <summary>What is SysGrid?</summary>
+      <p>A simple web page, made with only HTML and CSS, that replaces the paper register in the computer lab. Students pick a PC, report faulty machines and log their session.</p>
+    </details>
+
+    <details>
+      <summary>Problems it solves</summary>
+      <ul>
+        <li>Long queues at the paper register</li>
+        <li>Sitting at a PC that has a broken mouse or no network</li>
+        <li>No easy way to check who used which PC</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Who uses it?</summary>
+      <ul>
+        <li>Students: find a working PC</li>
+        <li>Lab assistants: see which PCs are faulty</li>
+        <li>Faculty: print the attendance log</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Team</summary>
+      <p>
+        Jeetmanyu Sharma, Roll No. 127, Section D<br>
+        Submitted to: Mr. Aanand Upadhayay<br>
+        Course: Fundamentals of Web Design
+      </p>
+    </details>
+  </section>
+
+  <footer>
+    South Asian University | Department of Engineering and Technology | December 2026
+  </footer>
+
+</body>
+</html>
