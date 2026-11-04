@@ -1,94 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SysGrid - Lab Workstation Allocation</title>
   <link rel="stylesheet" href="style(project).css">
 </head>
-
 <body>
+  <input type="checkbox" id="darkMode">
+  <label class="theme-label" for="darkMode">Toggle dark mode</label>
 
-  <header>
-    <h1>SysGrid</h1>
-    <p>Computer lab workstation allocation and session log system</p>
-  </header>
+  <div class="site-shell">
+    <header>
+      <h1>SysGrid</h1>
+      <p>Computer lab workstation allocation and session log system</p>
+    </header>
 
-  <section>
-    <h2>Seating Grid</h2>
-    <p>Green means working. Click a PC to mark it faulty (red).</p>
-    <button>PC-01</button>
-    <button>PC-02</button>
-    <button class="faulty">PC-03</button>
-    <button>PC-04</button>
-    <button>PC-05</button>
-    <button>PC-06</button>
-    <button>PC-07</button>
-    <button>PC-08</button>
-    <button>PC-09</button>
-    <button>PC-10</button>
-    <button>PC-11</button>
-    <button>PC-12</button>
-  </section>
+    <section>
+      <h2>Seating Grid</h2>
+      <p>Click a workstation to change it between working and faulty. PC-03 starts as faulty.</p>
+      <p><span class="green-dot"></span> Working &nbsp;&nbsp; <span class="red-dot"></span> Faulty</p>
+      <div class="seats">
+        <input type="checkbox" id="pc01"><label for="pc01">PC-01</label>
+        <input type="checkbox" id="pc02"><label for="pc02">PC-02</label>
+        <input type="checkbox" id="pc03" checked><label for="pc03">PC-03</label>
+        <input type="checkbox" id="pc04"><label for="pc04">PC-04</label>
+        <input type="checkbox" id="pc05"><label for="pc05">PC-05</label>
+        <input type="checkbox" id="pc06"><label for="pc06">PC-06</label>
+        <input type="checkbox" id="pc07"><label for="pc07">PC-07</label>
+        <input type="checkbox" id="pc08"><label for="pc08">PC-08</label>
+        <input type="checkbox" id="pc09"><label for="pc09">PC-09</label>
+        <input type="checkbox" id="pc10"><label for="pc10">PC-10</label>
+        <input type="checkbox" id="pc11"><label for="pc11">PC-11</label>
+        <input type="checkbox" id="pc12"><label for="pc12">PC-12</label>
+      </div>
+      <p class="note">Status changes reset when the page reloads.</p>
+    </section>
 
-  <section>
-    <h2>Session Register</h2>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Roll No.</th>
-        <th>PC No.</th>
-        <th>Subject</th>
-        <th>Time</th>
-      </tr>
-      <tr>
-        <td>Jeetmanyu Sharma</td>
-        <td>127</td>
-        <td>PC-05</td>
-        <td>Web Design</td>
-        <td>10:05</td>
-      </tr>
-      <tr>
-        <td>Student Two</td>
-        <td>128</td>
-        <td>PC-07</td>
-        <td>Web Design</td>
-        <td>10:10</td>
-      </tr>
-      <tr>
-        <td>Student Three</td>
-        <td>129</td>
-        <td>PC-02</td>
-        <td>Web Design</td>
-        <td>10:12</td>
-      </tr>
-    </table>
-  </section>
+    <section>
+      <h2>Session Register</h2>
+      <p>Filter sessions by subject:</p>
+      <input type="radio" name="subject" id="filterAll" checked><label class="filter-label" for="filterAll">All</label>
+      <input type="radio" name="subject" id="filterWeb"><label class="filter-label" for="filterWeb">Web Design</label>
+      <input type="radio" name="subject" id="filterProgramming"><label class="filter-label" for="filterProgramming">Programming</label>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Name</th><th>Roll No.</th><th>PC No.</th><th>Subject</th><th>Time</th></tr>
+          <tr class="web-row"><td>Jeetmanyu Sharma</td><td>127</td><td>PC-05</td><td>Web Design</td><td>10:05</td></tr>
+          <tr class="programming-row"><td>Student Two</td><td>128</td><td>PC-07</td><td>Programming</td><td>10:10</td></tr>
+          <tr class="web-row"><td>Student Three</td><td>129</td><td>PC-02</td><td>Web Design</td><td>10:12</td></tr>
+        </table>
+      </div>
+      <p class="note">These are sample entries. Saving new entries needs JavaScript or a server.</p>
+    </section>
 
-  <section>
-    <h2>About the Project</h2>
+    <section>
+      <h2>About the Project</h2>
+      <h3>What is SysGrid?</h3>
+      <p>A simple web page made with HTML and CSS to show computer lab workstation allocation and a sample session register.</p>
+      <h3>Problems it addresses</h3>
+      <ul>
+        <li>Showing which workstations are reported faulty</li>
+        <li>Seeing which students used which PCs in the sample register</li>
+        <li>Filtering the register by subject</li>
+      </ul>
+      <h3>Team</h3>
+      <p>Jeetmanyu Sharma, Roll No. 127, Section D<br>Submitted to: Mr. Aanand Upadhayay<br>Course: Fundamentals of Web Design</p>
+    </section>
 
-    <h3>What is SysGrid?</h3>
-    <p>A simple web page, made with only HTML and CSS, that replaces the paper register in the computer lab. Students pick a PC, report faulty machines and log their session.</p>
-
-    <h3>Problems it solves</h3>
-    <ul>
-      <li>Long queues at the paper register</li>
-      <li>Sitting at a PC that has a broken mouse or no network</li>
-      <li>No easy way to check who used which PC</li>
-    </ul>
-
-    <h3>Team</h3>
-    <p>
-      Jeetmanyu Sharma, Roll No. 127, Section D<br>
-      Submitted to: Mr. Aanand Upadhayay<br>
-      Course: Fundamentals of Web Design
-    </p>
-  </section>
-
-  <footer>
-    South Asian University | Department of Engineering and Technology | December 2026
-  </footer>
-
+    <footer>South Asian University | Department of Engineering and Technology | December 2026</footer>
+  </div>
 </body>
 </html>

@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f7;
+  color: #222;
+  line-height: 1.6;
+}
+
+.site-shell {
+  background-color: #f2f4f7;
+  color: #222;
+}
+
+header {
+  background-color: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+section {
+  max-width: 900px;
+  margin: 22px auto;
+  padding: 25px;
+  background-color: white;
+}
+
+h2 {
+  color: #1e3a5f;
+}
+
+h3 {
+  margin-bottom: 4px;
+  color: #33465f;
+}
+
+#darkMode {
+  display: none;
+}
+
+.theme-label {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 8px;
+  background-color: white;
+  color: #1e3a5f;
+  cursor: pointer;
+}
+
+#darkMode:checked + .theme-label + .site-shell {
+  background-color: #222;
+  color: white;
+}
+
+#darkMode:checked + .theme-label + .site-shell section {
+  background-color: #333;
+}
+
+#darkMode:checked + .theme-label + .site-shell h2,
+#darkMode:checked + .theme-label + .site-shell h3 {
+  color: #b7d4f5;
+}
+
+.green-dot,
+.red-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.green-dot {
+  background-color: #27845c;
+}
+
+.red-dot {
+  background-color: #c94349;
+}
+
+.seats {
+  margin-top: 15px;
+}
+
+.seats input {
+  display: none;
+}
+
+.seats label {
+  display: inline-block;
+  width: 100px;
+  margin: 0 8px 10px 0;
+  padding: 22px 0;
+  border-radius: 8px;
+  background-color: #27845c;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seats input:checked + label {
+  background-color: #c94349;
+}
+
+.seats label:hover {
+  opacity: 0.8;
+}
+
+.note {
+  color: #526071;
+  font-size: 14px;
+}
+
+#filterAll,
+#filterWeb,
+#filterProgramming {
+  display: none;
+}
+
+.filter-label {
+  display: inline-block;
+  margin: 0 5px 12px 0;
+  padding: 6px 12px;
+  border: 1px solid #1e3a5f;
+  border-radius: 15px;
+  color: #1e3a5f;
+  cursor: pointer;
+}
+
+#filterAll:checked + label,
+#filterWeb:checked + label,
+#filterProgramming:checked + label {
+  background-color: #1e3a5f;
+  color: white;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #1e3a5f;
+  color: white;
+}
+
+tr:hover td {
+  background-color: #fff8e1;
+  color: #222;
+}
+
+#filterWeb:checked ~ .table-wrap .programming-row {
+  display: none;
+}
+
+#filterProgramming:checked ~ .table-wrap .web-row {
+  display: none;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
